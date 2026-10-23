@@ -1,0 +1,12 @@
+{
+  "name": "HaGeZi Multi PRO mini",
+  "revision": "a1922493099f56bc5b0cf1f7bfa060921be421ee",
+  "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/a1922493099f56bc5b0cf1f7bfa060921be421ee/adblock/pro.mini.txt",
+  "sha256": "bce3daf388f70464947fbb06c8255f589b6d935ec7b7b1a78d0d2da94a3cb247",
+  "license": "GPL-3.0",
+  "licenseSource": "https://raw.githubusercontent.com/hagezi/dns-blocklists/a1922493099f56bc5b0cf1f7bfa060921be421ee/LICENSE",
+  "format": "Adblock",
+  "rules": 80303,
+  "automaticUpdates": false,
+  "status": "evaluation only; production distribution not cleared"
+}

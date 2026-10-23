@@ -1,0 +1,876 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E012A19B564BF1AF4C8270 /* SerializedPacketFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2FA34CE7D274C993FBC10 /* SerializedPacketFlow.swift */; };
+		052466E595BAE3F457C14C00 /* UmbraTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8D5148F4000E560A64643BA7 /* UmbraTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C635DCA4CAC2D87D5EE331B /* BlocklistSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F5F4CFA5194E380E2DFD8 /* BlocklistSource.json */; };
+		87593166E2F2226CCF7C56D9 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AAEDC3430DF965AB5448E3 /* PacketTunnelProvider.swift */; };
+		913058E30522F0AF12BDA79E /* AGDnsProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 1FBC355CA87236C9D34C1BC5 /* AGDnsProxy */; };
+		A71E4ACB7745D227AF83C002 /* RecoveryPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E4ACB7745D227AF83C001 /* RecoveryPreferences.swift */; };
+		A71E4ACB7745D227AF83C004 /* TunnelRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E4ACB7745D227AF83C003 /* TunnelRecovery.swift */; };
+		A71E4ACB7745D227AF83C006 /* EngineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E4ACB7745D227AF83C005 /* EngineConfiguration.swift */; };
+		A7DED74EE80849C5A1BB36D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C219F944DC50B0BDD4D198 /* Foundation.framework */; };
+		AEEA2C87E2064BAFEA30D315 /* blocked-hosts.txt in Resources */ = {isa = PBXBuildFile; fileRef = D90ACE8429CCEC497C5CEC86 /* blocked-hosts.txt */; };
+		B048924A1D3F21F90FF500CA /* AGDnsProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 934C2ECCAE62797BA6AEC1C4 /* AGDnsProxy */; };
+		B40BE832CDF1C6D09B5E291C /* DailyCounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC4E99CC17C2FD5CD345B /* DailyCounterStore.swift */; };
+		C2703C59EE9C1BFE5F02C65A /* AGDnsProxy in Frameworks */ = {isa = PBXBuildFile; productRef = B7680D45E46BC83F69D84F2E /* AGDnsProxy */; };
+		CDA041FBFE69077088B742F1 /* ProtectionSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0637CC3EB9B578C84E75EB0C /* ProtectionSnapshot.swift */; };
+		D3A54BF7A3D19778CE103806 /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = E83924970213C396C78FB5A2 /* ThirdPartyNotices.txt */; };
+		E65564DF479B59C85F50B7B5 /* BlocklistLicense.txt in Resources */ = {isa = PBXBuildFile; fileRef = 953E7F85123EDC16D7856ECC /* BlocklistLicense.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98C643FF37509B9C2484DE88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9871F4C308866AC003620A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD6A55920C0C222D1F75AE2A;
+			remoteInfo = UmbraTunnel;
+		};
+		B9871F62308866AD003620A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9871F4C308866AC003620A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9871F53308866AC003620A3;
+			remoteInfo = Umbra;
+		};
+		B9871F6C308866AD003620A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9871F4C308866AC003620A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9871F53308866AC003620A3;
+			remoteInfo = Umbra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78BC198FF48EEE266548018A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				052466E595BAE3F457C14C00 /* UmbraTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0637CC3EB9B578C84E75EB0C /* ProtectionSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProtectionSnapshot.swift; sourceTree = "<group>"; };
+		13AAEDC3430DF965AB5448E3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		26D2FA34CE7D274C993FBC10 /* SerializedPacketFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SerializedPacketFlow.swift; sourceTree = "<group>"; };
+		4B6F5F4CFA5194E380E2DFD8 /* BlocklistSource.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = BlocklistSource.json; sourceTree = "<group>"; };
+		8D5148F4000E560A64643BA7 /* UmbraTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UmbraTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		953E7F85123EDC16D7856ECC /* BlocklistLicense.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = BlocklistLicense.txt; sourceTree = "<group>"; };
+		A5C219F944DC50B0BDD4D198 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A71E4ACB7745D227AF83C001 /* RecoveryPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPreferences.swift; sourceTree = "<group>"; };
+		A71E4ACB7745D227AF83C003 /* TunnelRecovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelRecovery.swift; sourceTree = "<group>"; };
+		A71E4ACB7745D227AF83C005 /* EngineConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineConfiguration.swift; sourceTree = "<group>"; };
+		B9871F54308866AC003620A3 /* Umbra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Umbra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9871F61308866AD003620A3 /* UmbraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9871F6B308866AD003620A3 /* UmbraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96BC4E99CC17C2FD5CD345B /* DailyCounterStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DailyCounterStore.swift; sourceTree = "<group>"; };
+		D90ACE8429CCEC497C5CEC86 /* blocked-hosts.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "blocked-hosts.txt"; sourceTree = "<group>"; };
+		E83924970213C396C78FB5A2 /* ThirdPartyNotices.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ThirdPartyNotices.txt; path = Packages/DnsLibsEvaluation/ThirdPartyNotices.txt; sourceTree = "<group>"; };
+		EE017640350B35AF86A1183C /* UmbraTunnel.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = UmbraTunnel.entitlements; sourceTree = "<group>"; };
+		FD04EC6DDEE6184D1B6F63CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B9871F56308866AC003620A3 /* Umbra */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Umbra;
+			sourceTree = "<group>";
+		};
+		B9871F64308866AD003620A3 /* UmbraTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UmbraTests;
+			sourceTree = "<group>";
+		};
+		B9871F6E308866AD003620A3 /* UmbraUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UmbraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9871F51308866AC003620A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				913058E30522F0AF12BDA79E /* AGDnsProxy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F5E308866AD003620A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2703C59EE9C1BFE5F02C65A /* AGDnsProxy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F68308866AD003620A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF0CF0F64DAEFD13BB9B33C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7DED74EE80849C5A1BB36D5 /* Foundation.framework in Frameworks */,
+				B048924A1D3F21F90FF500CA /* AGDnsProxy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		452CC22F86C0D9CBC7C0DE41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D90ACE8429CCEC497C5CEC86 /* blocked-hosts.txt */,
+				953E7F85123EDC16D7856ECC /* BlocklistLicense.txt */,
+				4B6F5F4CFA5194E380E2DFD8 /* BlocklistSource.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7353361968C3E07DF95E909A /* Shared protection */ = {
+			isa = PBXGroup;
+			children = (
+				C96BC4E99CC17C2FD5CD345B /* DailyCounterStore.swift */,
+				0637CC3EB9B578C84E75EB0C /* ProtectionSnapshot.swift */,
+				26D2FA34CE7D274C993FBC10 /* SerializedPacketFlow.swift */,
+				A71E4ACB7745D227AF83C005 /* EngineConfiguration.swift */,
+				A71E4ACB7745D227AF83C003 /* TunnelRecovery.swift */,
+				A71E4ACB7745D227AF83C001 /* RecoveryPreferences.swift */,
+			);
+			name = "Shared protection";
+			path = Umbra/Protection;
+			sourceTree = "<group>";
+		};
+		961ED134A11C018FC63FAFB9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A5C219F944DC50B0BDD4D198 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B9871F4B308866AC003620A3 = {
+			isa = PBXGroup;
+			children = (
+				B9871F56308866AC003620A3 /* Umbra */,
+				B9871F64308866AD003620A3 /* UmbraTests */,
+				B9871F6E308866AD003620A3 /* UmbraUITests */,
+				B9871F55308866AC003620A3 /* Products */,
+				F79241A29CFD7E1025670A75 /* Frameworks */,
+				E50B88C3588C984508214FF8 /* UmbraTunnel */,
+				7353361968C3E07DF95E909A /* Shared protection */,
+				E83924970213C396C78FB5A2 /* ThirdPartyNotices.txt */,
+			);
+			sourceTree = "<group>";
+		};
+		B9871F55308866AC003620A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9871F54308866AC003620A3 /* Umbra.app */,
+				B9871F61308866AD003620A3 /* UmbraTests.xctest */,
+				B9871F6B308866AD003620A3 /* UmbraUITests.xctest */,
+				8D5148F4000E560A64643BA7 /* UmbraTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E50B88C3588C984508214FF8 /* UmbraTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				13AAEDC3430DF965AB5448E3 /* PacketTunnelProvider.swift */,
+				FD04EC6DDEE6184D1B6F63CF /* Info.plist */,
+				EE017640350B35AF86A1183C /* UmbraTunnel.entitlements */,
+				452CC22F86C0D9CBC7C0DE41 /* Resources */,
+			);
+			path = UmbraTunnel;
+			sourceTree = "<group>";
+		};
+		F79241A29CFD7E1025670A75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961ED134A11C018FC63FAFB9 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9871F53308866AC003620A3 /* Umbra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9871F73308866AD003620A3 /* Build configuration list for PBXNativeTarget "Umbra" */;
+			buildPhases = (
+				B9871F50308866AC003620A3 /* Sources */,
+				B9871F51308866AC003620A3 /* Frameworks */,
+				B9871F52308866AC003620A3 /* Resources */,
+				78BC198FF48EEE266548018A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E174DAFD6C3E034AE2D10B5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B9871F56308866AC003620A3 /* Umbra */,
+			);
+			name = Umbra;
+			packageProductDependencies = (
+				1FBC355CA87236C9D34C1BC5 /* AGDnsProxy */,
+			);
+			productName = Umbra;
+			productReference = B9871F54308866AC003620A3 /* Umbra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9871F60308866AD003620A3 /* UmbraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9871F76308866AD003620A3 /* Build configuration list for PBXNativeTarget "UmbraTests" */;
+			buildPhases = (
+				B9871F5D308866AD003620A3 /* Sources */,
+				B9871F5E308866AD003620A3 /* Frameworks */,
+				B9871F5F308866AD003620A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9871F63308866AD003620A3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B9871F64308866AD003620A3 /* UmbraTests */,
+			);
+			name = UmbraTests;
+			packageProductDependencies = (
+				B7680D45E46BC83F69D84F2E /* AGDnsProxy */,
+			);
+			productName = UmbraTests;
+			productReference = B9871F61308866AD003620A3 /* UmbraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9871F6A308866AD003620A3 /* UmbraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9871F79308866AD003620A3 /* Build configuration list for PBXNativeTarget "UmbraUITests" */;
+			buildPhases = (
+				B9871F67308866AD003620A3 /* Sources */,
+				B9871F68308866AD003620A3 /* Frameworks */,
+				B9871F69308866AD003620A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9871F6D308866AD003620A3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B9871F6E308866AD003620A3 /* UmbraUITests */,
+			);
+			name = UmbraUITests;
+			productName = UmbraUITests;
+			productReference = B9871F6B308866AD003620A3 /* UmbraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DD6A55920C0C222D1F75AE2A /* UmbraTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DD1B3B2F097E5C4BCBD8998 /* Build configuration list for PBXNativeTarget "UmbraTunnel" */;
+			buildPhases = (
+				DEC247A8A60836D9A914C20F /* Sources */,
+				BAF0CF0F64DAEFD13BB9B33C /* Frameworks */,
+				0E1EAAB855174A8DA39F8DD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UmbraTunnel;
+			packageProductDependencies = (
+				934C2ECCAE62797BA6AEC1C4 /* AGDnsProxy */,
+			);
+			productName = UmbraTunnel;
+			productReference = 8D5148F4000E560A64643BA7 /* UmbraTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9871F4C308866AC003620A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2710;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					B9871F53308866AC003620A3 = {
+						CreatedOnToolsVersion = 27.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions = {
+								enabled = 1;
+							};
+						};
+					};
+					B9871F60308866AD003620A3 = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = B9871F53308866AC003620A3;
+					};
+					B9871F6A308866AD003620A3 = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = B9871F53308866AC003620A3;
+					};
+					DD6A55920C0C222D1F75AE2A = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B9871F4F308866AC003620A3 /* Build configuration list for PBXProject "Umbra" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9871F4B308866AC003620A3;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F4D5A2F28838E71FCEDDBB19 /* XCLocalSwiftPackageReference "Packages/DnsLibsEvaluation" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B9871F55308866AC003620A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9871F53308866AC003620A3 /* Umbra */,
+				B9871F60308866AD003620A3 /* UmbraTests */,
+				B9871F6A308866AD003620A3 /* UmbraUITests */,
+				DD6A55920C0C222D1F75AE2A /* UmbraTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E1EAAB855174A8DA39F8DD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEA2C87E2064BAFEA30D315 /* blocked-hosts.txt in Resources */,
+				E65564DF479B59C85F50B7B5 /* BlocklistLicense.txt in Resources */,
+				1C635DCA4CAC2D87D5EE331B /* BlocklistSource.json in Resources */,
+				D3A54BF7A3D19778CE103806 /* ThirdPartyNotices.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F52308866AC003620A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F5F308866AD003620A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F69308866AD003620A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9871F50308866AC003620A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F5D308866AD003620A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9871F67308866AD003620A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC247A8A60836D9A914C20F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87593166E2F2226CCF7C56D9 /* PacketTunnelProvider.swift in Sources */,
+				B40BE832CDF1C6D09B5E291C /* DailyCounterStore.swift in Sources */,
+				CDA041FBFE69077088B742F1 /* ProtectionSnapshot.swift in Sources */,
+				00E012A19B564BF1AF4C8270 /* SerializedPacketFlow.swift in Sources */,
+				A71E4ACB7745D227AF83C006 /* EngineConfiguration.swift in Sources */,
+				A71E4ACB7745D227AF83C004 /* TunnelRecovery.swift in Sources */,
+				A71E4ACB7745D227AF83C002 /* RecoveryPreferences.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E174DAFD6C3E034AE2D10B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UmbraTunnel;
+			target = DD6A55920C0C222D1F75AE2A /* UmbraTunnel */;
+			targetProxy = 98C643FF37509B9C2484DE88 /* PBXContainerItemProxy */;
+		};
+		B9871F63308866AD003620A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9871F53308866AC003620A3 /* Umbra */;
+			targetProxy = B9871F62308866AD003620A3 /* PBXContainerItemProxy */;
+		};
+		B9871F6D308866AD003620A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9871F53308866AC003620A3 /* Umbra */;
+			targetProxy = B9871F6C308866AD003620A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21764BAF32A923E0048C94DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = UmbraTunnel/UmbraTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UmbraTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Umbra Experimental DNS";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.Umbra.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		743B270E578DF7A6A2C6FD33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = UmbraTunnel/UmbraTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UmbraTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Umbra Experimental DNS";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.Umbra.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B9871F71308866AD003620A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9871F72308866AD003620A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9871F74308866AD003620A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Umbra/Umbra.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.Umbra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B9871F75308866AD003620A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Umbra/Umbra.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.Umbra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B9871F77308866AD003620A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.UmbraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Umbra.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Umbra";
+			};
+			name = Debug;
+		};
+		B9871F78308866AD003620A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.UmbraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Umbra.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Umbra";
+			};
+			name = Release;
+		};
+		B9871F7A308866AD003620A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.UmbraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Umbra;
+			};
+			name = Debug;
+		};
+		B9871F7B308866AD003620A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2334XND6U2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saumyapatel.UmbraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Umbra;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DD1B3B2F097E5C4BCBD8998 /* Build configuration list for PBXNativeTarget "UmbraTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21764BAF32A923E0048C94DC /* Release */,
+				743B270E578DF7A6A2C6FD33 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9871F4F308866AC003620A3 /* Build configuration list for PBXProject "Umbra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9871F71308866AD003620A3 /* Debug */,
+				B9871F72308866AD003620A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9871F73308866AD003620A3 /* Build configuration list for PBXNativeTarget "Umbra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9871F74308866AD003620A3 /* Debug */,
+				B9871F75308866AD003620A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9871F76308866AD003620A3 /* Build configuration list for PBXNativeTarget "UmbraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9871F77308866AD003620A3 /* Debug */,
+				B9871F78308866AD003620A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9871F79308866AD003620A3 /* Build configuration list for PBXNativeTarget "UmbraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9871F7A308866AD003620A3 /* Debug */,
+				B9871F7B308866AD003620A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F4D5A2F28838E71FCEDDBB19 /* XCLocalSwiftPackageReference "Packages/DnsLibsEvaluation" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/DnsLibsEvaluation;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FBC355CA87236C9D34C1BC5 /* AGDnsProxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AGDnsProxy;
+		};
+		934C2ECCAE62797BA6AEC1C4 /* AGDnsProxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AGDnsProxy;
+		};
+		B7680D45E46BC83F69D84F2E /* AGDnsProxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AGDnsProxy;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B9871F4C308866AC003620A3 /* Project object */;
+}

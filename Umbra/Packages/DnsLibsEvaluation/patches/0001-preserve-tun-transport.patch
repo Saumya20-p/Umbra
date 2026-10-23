@@ -1,0 +1,399 @@
+diff --git a/doxyfiles/mac_main_page.h b/doxyfiles/mac_main_page.h
+index f871048..27e67e6 100644
+--- a/doxyfiles/mac_main_page.h
++++ b/doxyfiles/mac_main_page.h
+@@ -38,22 +38,24 @@ It supports two modes:
+ - Packet tunnel mode: pass `nil` for the TUN file descriptor and provide an @ref NEPacketTunnelFlow.
+ 
+  The listener extracts DNS messages from incoming packets and calls the user-provided
+- `messageHandler` block with the DNS payload as `NSData *` without transport headers.
++ `transportMessageHandler` block with the DNS payload as `NSData *` without transport headers
++ or a TCP length prefix, plus `isTcp` (true for TCP, false for UDP).
++ The legacy `messageHandler` initializer remains available but omits the transport metadata.
+  The handler may reply synchronously or asynchronously using `AGDnsTunListenerReplyHandler`.
+ 
+  A typical integration is to forward the message to
+  @ref AGDnsProxy::handleMessage:withInfo:withCompletionHandler:.
+ 
+  @code{.swift}
+- var error: NSError?
+- let listener = AGDnsTunListener(
++ let listener = try AGDnsTunListener(
+      tunFd: nil,
+      orTunnelFlow: self.packetFlow,
+      mtu: 0,
+-     messageHandler: { request, replyHandler in
+-         proxy.handleMessage(request, withInfo: nil, withCompletionHandler: replyHandler)
+-     },
+-     error: &error
++     transportMessageHandler: { request, isTcp, replyHandler in
++         let info = AGDnsMessageInfo()
++         info.isTcp = isTcp
++         proxy.handleMessage(request, with: info, withCompletionHandler: replyHandler)
++     }
+  )
+  @endcode
+ 
+diff --git a/platform/mac/DnsLibsTestApp/PacketTunnel/PacketTunnelProvider.swift b/platform/mac/DnsLibsTestApp/PacketTunnel/PacketTunnelProvider.swift
+index e8ce6f8..a59a7c7 100644
+--- a/platform/mac/DnsLibsTestApp/PacketTunnel/PacketTunnelProvider.swift
++++ b/platform/mac/DnsLibsTestApp/PacketTunnel/PacketTunnelProvider.swift
+@@ -109,12 +109,14 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
+         try logWriter?.start()
+ 
+         dnsTunListener = try AGDnsTunListener(tunFd: nil, orTunnelFlow: self.packetFlow,
+-                                          mtu: mtu, messageHandler: { [weak self] data, handler in
++                                          mtu: mtu, transportMessageHandler: { [weak self] data, isTcp, handler in
+             guard let dnsProxy = self?.dnsProxy else {
+                 handler(nil)
+                 return
+             }
+-            dnsProxy.handleMessage(data, with: AGDnsMessageInfo(), withCompletionHandler: { reply in
++            let info = AGDnsMessageInfo()
++            info.isTcp = isTcp
++            dnsProxy.handleMessage(data, with: info, withCompletionHandler: { reply in
+                 handler(reply)
+             })
+         })
+diff --git a/platform/mac/framework/AGDnsTunListener.h b/platform/mac/framework/AGDnsTunListener.h
+index e8761bd..742f4a5 100644
+--- a/platform/mac/framework/AGDnsTunListener.h
++++ b/platform/mac/framework/AGDnsTunListener.h
+@@ -25,6 +25,16 @@ typedef void (^AGDnsTunListenerReplyHandler)(NSData * _Nullable reply);
+  */
+ typedef void (^AGDnsTunListenerMessageHandler)(NSData *message, AGDnsTunListenerReplyHandler replyHandler);
+ 
++/**
++ * Handler preserving the transport of the incoming DNS message.
++ * Lifetime/threading rules are the same as AGDnsTunListenerMessageHandler.
++ * @param message DNS message without transport headers or TCP length prefix
++ * @param isTcp YES for TCP, NO for UDP
++ * @param replyHandler Completion handler for a DNS response without transport framing
++ */
++typedef void (^AGDnsTunListenerTransportMessageHandler)(
++        NSData *message, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler);
++
+ 
+ /**
+  * TUN listener that handles both UDP and TCP DNS traffic from a TUN device.
+@@ -38,10 +48,12 @@ typedef void (^AGDnsTunListenerMessageHandler)(NSData *message, AGDnsTunListener
+  *     initWithTunFd:nil
+  *      orTunnelFlow:self.packetFlow
+  *               mtu:1500
+- *    messageHandler:^(NSData *request, AGDnsTunListenerReplyHandler replyHandler) {
++ *    transportMessageHandler:^(NSData *request, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
+  *        // Process request asynchronously and call replyHandler when done
++ *        AGDnsMessageInfo *info = [AGDnsMessageInfo new];
++ *        info.isTcp = isTcp;
+  *        [dnsProxy handleMessage:request
+- *                       withInfo:nil
++ *                       withInfo:info
+  *          withCompletionHandler:replyHandler];
+  *    }
+  *             error:&error];
+@@ -54,10 +66,12 @@ typedef void (^AGDnsTunListenerMessageHandler)(NSData *message, AGDnsTunListener
+  *     initWithTunFd:@(tunFd)
+  *      orTunnelFlow:nil
+  *               mtu:1500
+- *    messageHandler:^(NSData *request, AGDnsTunListenerReplyHandler replyHandler) {
++ *    transportMessageHandler:^(NSData *request, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
+  *        // Process request asynchronously and call replyHandler when done
++ *        AGDnsMessageInfo *info = [AGDnsMessageInfo new];
++ *        info.isTcp = isTcp;
+  *        [dnsProxy handleMessage:request
+- *                       withInfo:nil
++ *                       withInfo:info
+  *          withCompletionHandler:replyHandler];
+  *    }
+  *             error:&error];
+@@ -86,6 +100,16 @@ typedef void (^AGDnsTunListenerMessageHandler)(NSData *message, AGDnsTunListener
+                         messageHandler:(AGDnsTunListenerMessageHandler)handler
+                                  error:(NSError **)error;
+ 
++/**
++ * Initialize with transport metadata; modes and validation match the legacy initializer.
++ * Prefer this initializer when forwarding messages to AGDnsProxy; set AGDnsMessageInfo.isTcp.
++ */
++- (nullable instancetype)initWithTunFd:(nullable NSNumber *)fd
++                          orTunnelFlow:(nullable NEPacketTunnelFlow *)tunnelFlow
++                                   mtu:(int)mtu
++               transportMessageHandler:(AGDnsTunListenerTransportMessageHandler)handler
++                                 error:(NSError **)error;
++
+ /**
+  * Stop the listener and clean up resources.
+  * 
+diff --git a/platform/mac/framework/AGDnsTunListener.mm b/platform/mac/framework/AGDnsTunListener.mm
+index 5f996e1..35a7189 100644
+--- a/platform/mac/framework/AGDnsTunListener.mm
++++ b/platform/mac/framework/AGDnsTunListener.mm
+@@ -25,7 +25,7 @@ - (void)handlePackets:(NSArray<NSData *> *)packets;
+ 
+ @implementation AGDnsTunListener {
+     TunListener *_listener;
+-    AGDnsTunListenerMessageHandler _handler;
++    AGDnsTunListenerTransportMessageHandler _handler;
+     NEPacketTunnelFlow *_tunnelFlow;
+     void (^_readPacketsHandler)(NSArray<NSData *> *, NSArray<NSNumber *> *);
+     int _tunFd;
+@@ -36,6 +36,21 @@ - (nullable instancetype)initWithTunFd:(nullable NSNumber *)fd
+                                    mtu:(int)mtu
+                         messageHandler:(AGDnsTunListenerMessageHandler)handler
+                                  error:(NSError **)error {
++    AGDnsTunListenerTransportMessageHandler transportHandler = nil;
++    if (handler) {
++        transportHandler = ^(NSData *message, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
++            handler(message, replyHandler);
++        };
++    }
++    return [self initWithTunFd:fd orTunnelFlow:tunnelFlow mtu:mtu
++        transportMessageHandler:transportHandler error:error];
++}
++
++- (nullable instancetype)initWithTunFd:(nullable NSNumber *)fd
++                          orTunnelFlow:(nullable NEPacketTunnelFlow *)tunnelFlow
++                                   mtu:(int)mtu
++               transportMessageHandler:(AGDnsTunListenerTransportMessageHandler)handler
++                                 error:(NSError **)error {
+     self = [super init];
+     if (!self) {
+         return nil;
+@@ -57,7 +72,7 @@ - (nullable instancetype)initWithTunFd:(nullable NSNumber *)fd
+ 
+     // Initialize C++ TunListener
+     auto init_result = _listener->init(_tunFd, mtu,
+-        [self](ag::Uint8View request, TunListener::Completion completion) {
++        [self](ag::Uint8View request, ag::utils::TransportProtocol proto, TunListener::Completion completion) {
+             @autoreleasepool {
+                 // Copy request data because it's only valid during this callback execution.
+                 // The handler may process it asynchronously and call replyHandler later.
+@@ -67,7 +82,7 @@ - (nullable instancetype)initWithTunFd:(nullable NSNumber *)fd
+                 // called asynchronously. The completion callback will copy reply data
+                 // immediately when invoked, so reply.bytes only needs to be valid during
+                 // the completion call.
+-                _handler(requestData, ^(NSData *reply) {
++                _handler(requestData, proto == ag::utils::TP_TCP, ^(NSData *reply) {
+                     if (reply) {
+                         completion(ag::Uint8View{(const uint8_t *)reply.bytes, reply.length});
+                     } else {
+diff --git a/platform/mac/framework/test_AGDnsTunListener.mm b/platform/mac/framework/test_AGDnsTunListener.mm
+index baa7b87..7418eda 100644
+--- a/platform/mac/framework/test_AGDnsTunListener.mm
++++ b/platform/mac/framework/test_AGDnsTunListener.mm
+@@ -342,10 +342,12 @@ int main(int argc, const char *argv[]) {
+             initWithTunFd:nil           // No TUN fd in external mode
+              orTunnelFlow:mockFlow      // Use NEPacketTunnelFlow
+                       mtu:0             // Use default MTU
+-           messageHandler:^(NSData *request, AGDnsTunListenerReplyHandler replyHandler) {
++           transportMessageHandler:^(NSData *request, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
+                // Process DNS request through DnsProxy
++               AGDnsMessageInfo *info = [AGDnsMessageInfo new];
++               info.isTcp = isTcp;
+                [proxy handleMessage:request
+-                           withInfo:nil
++                           withInfo:info
+               withCompletionHandler:replyHandler];
+            }
+                     error:&error];
+@@ -355,10 +357,12 @@ int main(int argc, const char *argv[]) {
+             initWithTunFd:@(tun_fd)     // Autonomous mode with TUN fd
+              orTunnelFlow:nil           // No NEPacketTunnelFlow
+                       mtu:0             // Use default MTU
+-           messageHandler:^(NSData *request, AGDnsTunListenerReplyHandler replyHandler) {
++           transportMessageHandler:^(NSData *request, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
+                // Process DNS request through DnsProxy
++               AGDnsMessageInfo *info = [AGDnsMessageInfo new];
++               info.isTcp = isTcp;
+                [proxy handleMessage:request
+-                           withInfo:nil
++                           withInfo:info
+               withCompletionHandler:replyHandler];
+            }
+                     error:&error];
+diff --git a/platform/mac/testapp/common/PacketTunnelProvider.m b/platform/mac/testapp/common/PacketTunnelProvider.m
+index 0a4d0d5..b7ac193 100644
+--- a/platform/mac/testapp/common/PacketTunnelProvider.m
++++ b/platform/mac/testapp/common/PacketTunnelProvider.m
+@@ -177,9 +177,11 @@ - (void) startPacketHandling
+         initWithTunFd:nil                    // External mode
+          orTunnelFlow:self.packetFlow        // Use NEPacketTunnelFlow API
+                   mtu:0                      // Use default MTU
+-       messageHandler:^(NSData *request, AGDnsTunListenerReplyHandler replyHandler) {
++       transportMessageHandler:^(NSData *request, BOOL isTcp, AGDnsTunListenerReplyHandler replyHandler) {
++           AGDnsMessageInfo *info = [AGDnsMessageInfo new];
++           info.isTcp = isTcp;
+            [self->proxy handleMessage:request
+-                             withInfo:nil
++                             withInfo:info
+                 withCompletionHandler:replyHandler];
+        }
+                 error:&error];
+diff --git a/proxy/include/dns/proxy/tun_listener.h b/proxy/include/dns/proxy/tun_listener.h
+index 577ac61..3cb0bda 100644
+--- a/proxy/include/dns/proxy/tun_listener.h
++++ b/proxy/include/dns/proxy/tun_listener.h
+@@ -1,10 +1,12 @@
+ #pragma once
+ 
++#include <cstddef>
+ #include <functional>
+ #include <memory>
+ 
+ #include "common/defs.h"
+ #include "common/error.h"
++#include "common/net_utils.h"
+ #include "dns/common/event_loop.h"
+ #include "tcpip/tcpip.h"
+ 
+@@ -44,6 +46,16 @@ public:
+      */
+     using RequestCallback = std::function<void(Uint8View request, Completion completion)>;
+ 
++    /**
++     * Request callback preserving the transport of the incoming DNS message.
++     * The request and completion have the same lifetime/threading rules as RequestCallback.
++     * @param request DNS message without transport headers or TCP length prefix
++     * @param proto Transport over which the message was received (TP_UDP or TP_TCP)
++     * @param completion Callback to invoke with the response
++     */
++    using RequestCallbackWithProtocol
++            = std::function<void(Uint8View request, utils::TransportProtocol proto, Completion completion)>;
++
+     /**
+      * Output callback type for sending packets back to TUN device (external mode)
+      * @param packet The packet to send
+@@ -78,6 +90,14 @@ public:
+     [[nodiscard]] Error<InitError> init(
+             int fd, int mtu, RequestCallback request_callback, OutputCallback output_callback = nullptr);
+ 
++    /** Initialize with transport metadata; otherwise identical to the legacy overload above. */
++    [[nodiscard]] Error<InitError> init(
++            int fd, int mtu, RequestCallbackWithProtocol request_callback, OutputCallback output_callback = nullptr);
++
++    /** Preserve unambiguous null-callback validation for legacy callers. */
++    [[nodiscard]] Error<InitError> init(
++            int fd, int mtu, std::nullptr_t, OutputCallback output_callback = nullptr);
++
+     /**
+      * Handle incoming packets from external source (external mode only)
+      * @param packets Array of raw IP packets (without TUN headers)
+diff --git a/proxy/test/tun_listener_standalone.cpp b/proxy/test/tun_listener_standalone.cpp
+index 60314b2..f8dfd67 100644
+--- a/proxy/test/tun_listener_standalone.cpp
++++ b/proxy/test/tun_listener_standalone.cpp
+@@ -295,10 +295,12 @@ int main(int argc, char *argv[]) {
+     // Create TunListener
+     dbglog(g_logger, "Initializing TunListener in {} mode", external_mode ? "EXTERNAL" : "AUTONOMOUS");
+ 
+-    TunListener::RequestCallback request_callback
+-            = [&proxy](ag::Uint8View request, TunListener::Completion completion) {
++    TunListener::RequestCallbackWithProtocol request_callback
++            = [&proxy](ag::Uint8View request, ag::utils::TransportProtocol proto, TunListener::Completion completion) {
+                 // Process DNS request through DnsProxy
+-                auto reply = proxy.handle_message_sync(request, nullptr);
++                DnsMessageInfo info;
++                info.proto = proto;
++                auto reply = proxy.handle_message_sync(request, &info);
+                 completion(ag::Uint8View{reply.data(), reply.size()});
+             };
+ 
+diff --git a/proxy/test/tun_listener_test.cpp b/proxy/test/tun_listener_test.cpp
+index 88c4572..386f4c4 100644
+--- a/proxy/test/tun_listener_test.cpp
++++ b/proxy/test/tun_listener_test.cpp
+@@ -38,8 +38,8 @@ TEST(TunListenerTest, MultipleDeinitSafe) {
+     TunListener listener;
+     
+     // Deinit without init should be safe
+-    EXPECT_NO_THROW(listener.deinit());
+-    EXPECT_NO_THROW(listener.deinit());
++    listener.deinit();
++    listener.deinit();
+ }
+ 
+ TEST(TunListenerTest, DefaultMTU) {
+@@ -56,3 +56,38 @@ TEST(TunListenerTest, DefaultMTU) {
+     }
+     listener.deinit();
+ }
++
++TEST(TunListenerTest, ProtocolCallbackInvalidParameters) {
++    TunListener listener;
++    TunListener::RequestCallbackWithProtocol callback
++            = [](ag::Uint8View, ag::utils::TransportProtocol, TunListener::Completion) {};
++
++    auto result = listener.init(-1, -1, callback);
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_MTU);
++
++    TunListener::RequestCallbackWithProtocol null_callback;
++    result = listener.init(-1, 1500, null_callback);
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_CALLBACK);
++
++    result = listener.init(-1, 1500, callback);
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_CALLBACK);
++    listener.deinit();
++}
++
++TEST(TunListenerTest, LegacyNullLiteralRemainsUnambiguous) {
++    TunListener listener;
++    auto result = listener.init(-1, 1500, nullptr);
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_CALLBACK);
++
++    result = listener.init(-1, 1500, nullptr, [](ag::Uint8View) {});
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_CALLBACK);
++
++    result = listener.init(-1, -1, nullptr);
++    ASSERT_TRUE(result);
++    EXPECT_EQ(result->value(), TunListener::IE_INVALID_MTU);
++}
+diff --git a/proxy/tun_listener.cpp b/proxy/tun_listener.cpp
+index b1aa153..c9e6b46 100644
+--- a/proxy/tun_listener.cpp
++++ b/proxy/tun_listener.cpp
+@@ -29,7 +29,7 @@ struct TunListener::Impl {
+     EventLoopPtr loop;
+     int fd{-1};
+     int mtu{0};
+-    TunListener::RequestCallback request_callback;
++    TunListener::RequestCallbackWithProtocol request_callback;
+     TunListener::OutputCallback output_callback; // Only used in external mode
+     TcpipCtx *tcpip_ctx{nullptr}; // Only used in autonomous mode
+     HashMap<uint64_t, TunConnection> connections;
+@@ -203,7 +203,7 @@ struct TunListener::Impl {
+         };
+ 
+         // Call user callback
+-        request_callback(Uint8View{request_data.data(), request_data.size()}, std::move(completion));
++        request_callback(Uint8View{request_data.data(), request_data.size()}, proto, std::move(completion));
+ 
+         co_return;
+     }
+@@ -239,6 +239,23 @@ TunListener::~TunListener() = default;
+ 
+ Error<TunListener::InitError> TunListener::init(
+         int fd, int mtu, RequestCallback request_callback, OutputCallback output_callback) {
++    RequestCallbackWithProtocol callback;
++    if (request_callback) {
++        callback = [request_callback = std::move(request_callback)](
++                           Uint8View request, utils::TransportProtocol, Completion completion) {
++            request_callback(request, std::move(completion));
++        };
++    }
++    return init(fd, mtu, std::move(callback), std::move(output_callback));
++}
++
++Error<TunListener::InitError> TunListener::init(
++        int fd, int mtu, std::nullptr_t, OutputCallback output_callback) {
++    return init(fd, mtu, RequestCallback{}, std::move(output_callback));
++}
++
++Error<TunListener::InitError> TunListener::init(
++        int fd, int mtu, RequestCallbackWithProtocol request_callback, OutputCallback output_callback) {
+     std::unique_ptr<Impl> &tun_listener = m_pimpl;
+ 
+     if (mtu < 0) {

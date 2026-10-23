@@ -1,0 +1,26 @@
+.DS_Store
+DerivedData/
+.build/
+*.xcuserstate
+xcuserdata/
+*.xcresult
+*.xctestproducts/
+.swiftpm/
+.xcodebuildmcp/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.p12
+*.p8
+*.mobileprovision
+
+# Local-only planning, mockups, research, history and device evidence.
+/AGENTS.md
+/Design/
+/Docs/
+/Research/
+/umbra-handoff/
+/Archive/
+/Ad block test/
+/umbra-codex-pack/

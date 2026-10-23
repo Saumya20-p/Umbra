@@ -1,0 +1,405 @@
+{
+  "patchID": "2.8.45-umbra-transport1",
+  "sourceCommit": "e0654ab8c53109c6cca7a706b6c1166f96f0a3c4",
+  "recipeCommit": "b9ec3cc2305061641009cfdf5b2a63d1aec983e9",
+  "tools": {
+    "python": "3.14.6",
+    "conan": "2.21.0",
+    "cmake": "3.31.6",
+    "dependencyCmake": "3.31.12",
+    "appleClang": "21.0.0.21000334",
+    "sdk": "27.1"
+  },
+  "patchSHA256": "46c68b01afdbe70b775b466b47992bd9b83c73f2aa726e68a1daf28c26fa9b95",
+  "lockSHA256": "0b560c921f5aae509985124e88a23b31603c44607fa092b839f13a518006efe4",
+  "profiles": {
+    "default": [
+      {
+        "ref": "cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f4dfdc9b149c1875d795ceac4820564f"
+      },
+      {
+        "ref": "libevent/2.1.11@adguard/oss#871e556dc7db8847aefaa9cfd230db69",
+        "packageID": "eda0dbe1da1ee73b0c7d537f965d68c9e6f025c4",
+        "packageRevision": "3790e3f1d3fc201d903cc8b5ea8f1abc"
+      },
+      {
+        "ref": "openssl/boring-2024-09-13@adguard/oss#325eeda72477e4c1d1a18d607c8704c0",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "97a96c9a4d5888fe15275d5c7e70dc59"
+      },
+      {
+        "ref": "libsodium/1.0.18@adguard/oss#812e2406acd49c4ba9a89a454b57315b",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "7e9c6f9f02e5d6731b46f772038e253c"
+      },
+      {
+        "ref": "libuv/1.41.0@adguard/oss#1c1c2b1dfe58480a54ddf7a71a3ac806",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "0a4ae0ea6a04784d0ac9576e9f867697"
+      },
+      {
+        "ref": "klib/2021-04-06@adguard/oss#d79c40384bfe661c91c75ad1615bff0d",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "9711b0cbabed8f9089d4db9f118c897e"
+      },
+      {
+        "ref": "ldns/2021-03-29@adguard/oss#fd1352e56cca9b0313c7f006f663e053",
+        "packageID": "8852a47bccfa04652f4a570c123909c5bbf1fa14",
+        "packageRevision": "f6709fc4f28cae98c4ce6b5b33d52d08"
+      },
+      {
+        "ref": "magic_enum/0.9.5#768c09bb424bda31d224304693b50fb3",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f9173d81294187c1cebdfcb1fcd8051c"
+      },
+      {
+        "ref": "native_libs_common/8.0.27@adguard/oss#3ab86bebf81a949892f6459bc3bea874",
+        "packageID": "5304313359c0e391d2d8cd6020bdc54156dbe507",
+        "packageRevision": "f15cf6ac6926ac996ef6302f6e2e3ccf"
+      },
+      {
+        "ref": "fmt/12.1.0#6baf0fb8351783472b94ee6e36232391",
+        "packageID": "1a873064632769507c32ae63fd99f7ef66f443d1",
+        "packageRevision": "65e20f00e8616422a502f439156ce91f"
+      },
+      {
+        "ref": "llhttp/9.1.3@adguard/oss#73e3f4ea6b8b4ac39b0fa6e5b366a6f3",
+        "packageID": "fa907d6872e6d538350c7bfb2e5a476214c4727f",
+        "packageRevision": "2bea6210e327e32983338b6ace770378"
+      },
+      {
+        "ref": "nghttp2/1.56.0@adguard/oss#227b6065ed31c973828dff969ed60eac",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "16f721c9cdd979597671cf76643d3441"
+      },
+      {
+        "ref": "nghttp3/1.0.0@adguard/oss#eebebee4f2e7e2f96ff6604c29ec9232",
+        "packageID": "9b6ff9b85fe328bd28726ffa06a4fd57cfddf668",
+        "packageRevision": "d3230ba81f895d41039940518f3a5b49"
+      },
+      {
+        "ref": "ngtcp2/1.0.1@adguard/oss#8df07ca7aeeba2cb52adad658ae8b357",
+        "packageID": "eda0dbe1da1ee73b0c7d537f965d68c9e6f025c4",
+        "packageRevision": "7e9e333b48358b28280cba7535a92b0d"
+      },
+      {
+        "ref": "pcre2/10.37@adguard/oss#73864ed3c4d8e34486bc484dc3e133e4",
+        "packageID": "1d4c32bc85d7bac384315276e0c04278588fac8d",
+        "packageRevision": "d687d2f48df2265f7f2179e9e678f6d1"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "07bfd7e70a58e4e4439755c4c47dfdb95e4ce976",
+        "packageRevision": "d26754443866bfcfacd7a325308fcc5f"
+      },
+      {
+        "ref": "tldregistry/2022-12-26@adguard/oss#45b0964264aaf68f25514d9fa3f9558a",
+        "packageID": "9b6ff9b85fe328bd28726ffa06a4fd57cfddf668",
+        "packageRevision": "797bace0bf8779ee56b57364b7a2401d"
+      },
+      {
+        "ref": "ada/2.7.4#e86909dd9cb9714ca39dbc12f7f41053",
+        "packageID": "23ab9aca68611a207a1da91d225cc91bac0bd902",
+        "packageRevision": "fa597cd28ccd40deaed5918cbffbea4a"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "07bfd7e70a58e4e4439755c4c47dfdb95e4ce976",
+        "packageRevision": "d26754443866bfcfacd7a325308fcc5f"
+      }
+    ],
+    "ios": [
+      {
+        "ref": "cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f4dfdc9b149c1875d795ceac4820564f"
+      },
+      {
+        "ref": "libevent/2.1.11@adguard/oss#871e556dc7db8847aefaa9cfd230db69",
+        "packageID": "5efd29bb4cdf816044dbe14f378432de6657d7cd",
+        "packageRevision": "498ef0ef8266eed06f7526b61db3224d"
+      },
+      {
+        "ref": "openssl/boring-2024-09-13@adguard/oss#325eeda72477e4c1d1a18d607c8704c0",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "24bb8558ed51c3dd51238670b40ddb7a"
+      },
+      {
+        "ref": "libsodium/1.0.18@adguard/oss#812e2406acd49c4ba9a89a454b57315b",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "09e2cae66e5a6f148e214f61369b0c19"
+      },
+      {
+        "ref": "libuv/1.41.0@adguard/oss#1c1c2b1dfe58480a54ddf7a71a3ac806",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "e3f9e54caab3e77d43e2e2478c01e358"
+      },
+      {
+        "ref": "klib/2021-04-06@adguard/oss#d79c40384bfe661c91c75ad1615bff0d",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "5e271d4e26143ea3fe763d15c8b500f5"
+      },
+      {
+        "ref": "ldns/2021-03-29@adguard/oss#fd1352e56cca9b0313c7f006f663e053",
+        "packageID": "1c1d2757b2dbb5e627f61a14c1729b3d69166171",
+        "packageRevision": "27d1908125abde20db7cb0f61a9d35a4"
+      },
+      {
+        "ref": "magic_enum/0.9.5#768c09bb424bda31d224304693b50fb3",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f9173d81294187c1cebdfcb1fcd8051c"
+      },
+      {
+        "ref": "native_libs_common/8.0.27@adguard/oss#3ab86bebf81a949892f6459bc3bea874",
+        "packageID": "54385c112820502900b262bebc2b0fdb00ad6124",
+        "packageRevision": "0ffb96c31fcb59b3035fcd9dda9969b6"
+      },
+      {
+        "ref": "fmt/12.1.0#6baf0fb8351783472b94ee6e36232391",
+        "packageID": "38dc2d6419bc7485774ffc616daca7ba7a068355",
+        "packageRevision": "d7ab7333cbe42c9a291705f372a15725"
+      },
+      {
+        "ref": "llhttp/9.1.3@adguard/oss#73e3f4ea6b8b4ac39b0fa6e5b366a6f3",
+        "packageID": "a953a3a9304ba004eefc6076932a2ff7d1aec750",
+        "packageRevision": "d2b5311ac373ecb449a524f5c81fcc1a"
+      },
+      {
+        "ref": "nghttp2/1.56.0@adguard/oss#227b6065ed31c973828dff969ed60eac",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "7a999edd5b55ecc4ef1c34a2c88950e0"
+      },
+      {
+        "ref": "nghttp3/1.0.0@adguard/oss#eebebee4f2e7e2f96ff6604c29ec9232",
+        "packageID": "5851c23b8a7c8e1ce2d1a72e28be43b0f57c1b6c",
+        "packageRevision": "4506a38eab91114e2df6c8ff976e9e74"
+      },
+      {
+        "ref": "ngtcp2/1.0.1@adguard/oss#8df07ca7aeeba2cb52adad658ae8b357",
+        "packageID": "5efd29bb4cdf816044dbe14f378432de6657d7cd",
+        "packageRevision": "e84440c155f076f8201b75b0b80992c9"
+      },
+      {
+        "ref": "pcre2/10.37@adguard/oss#73864ed3c4d8e34486bc484dc3e133e4",
+        "packageID": "7462dd5be25d74de2787aec52caee6253d85b9e0",
+        "packageRevision": "669380500a3f1989f1cdd271812c172e"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "27a89ec5668da61c09bf41d860b01b51ac550a8e",
+        "packageRevision": "bee3c43f053cc9a307509b191335ff75"
+      },
+      {
+        "ref": "tldregistry/2022-12-26@adguard/oss#45b0964264aaf68f25514d9fa3f9558a",
+        "packageID": "5851c23b8a7c8e1ce2d1a72e28be43b0f57c1b6c",
+        "packageRevision": "e581fdad627be2755cccfb6d8abf9a52"
+      },
+      {
+        "ref": "ada/2.7.4#e86909dd9cb9714ca39dbc12f7f41053",
+        "packageID": "ce86ee1df6669b3ccbc10610447698bc784ec92e",
+        "packageRevision": "cead1add617015458cbc4bf8a652a7d0"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "27a89ec5668da61c09bf41d860b01b51ac550a8e",
+        "packageRevision": "bee3c43f053cc9a307509b191335ff75"
+      }
+    ],
+    "sim-arm": [
+      {
+        "ref": "cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f4dfdc9b149c1875d795ceac4820564f"
+      },
+      {
+        "ref": "libevent/2.1.11@adguard/oss#871e556dc7db8847aefaa9cfd230db69",
+        "packageID": "70c7cb57cbd9d2b2262635a76c9aeae6845fc917",
+        "packageRevision": "3f96d785bec4a504b965390f438997fb"
+      },
+      {
+        "ref": "openssl/boring-2024-09-13@adguard/oss#325eeda72477e4c1d1a18d607c8704c0",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "ac686e0fe7585d1a912334f3643eaf96"
+      },
+      {
+        "ref": "libsodium/1.0.18@adguard/oss#812e2406acd49c4ba9a89a454b57315b",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "693d549acd7e8b5097272d221b5ec432"
+      },
+      {
+        "ref": "libuv/1.41.0@adguard/oss#1c1c2b1dfe58480a54ddf7a71a3ac806",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "71b39ebc9eee7abc5844a8dd7bb05b9a"
+      },
+      {
+        "ref": "klib/2021-04-06@adguard/oss#d79c40384bfe661c91c75ad1615bff0d",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "3b91fe323c4eba66c41c3c8d62607b29"
+      },
+      {
+        "ref": "ldns/2021-03-29@adguard/oss#fd1352e56cca9b0313c7f006f663e053",
+        "packageID": "278088def33018c534ee75b6188a2d4b646fce17",
+        "packageRevision": "96598abf93c9add5c0129f7cfc12482b"
+      },
+      {
+        "ref": "magic_enum/0.9.5#768c09bb424bda31d224304693b50fb3",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f9173d81294187c1cebdfcb1fcd8051c"
+      },
+      {
+        "ref": "native_libs_common/8.0.27@adguard/oss#3ab86bebf81a949892f6459bc3bea874",
+        "packageID": "c3bd924872868bac4a3da0a4492a2904dcc06afb",
+        "packageRevision": "c5110689fa543cfa6653d66cb06ab539"
+      },
+      {
+        "ref": "fmt/12.1.0#6baf0fb8351783472b94ee6e36232391",
+        "packageID": "c59649787655fd6e323964c9620607722b129029",
+        "packageRevision": "aceeb550fe1b96fe1de22f70c43af0df"
+      },
+      {
+        "ref": "llhttp/9.1.3@adguard/oss#73e3f4ea6b8b4ac39b0fa6e5b366a6f3",
+        "packageID": "aff5d03d95aa72aff982ab93d7c346a69b1955bf",
+        "packageRevision": "885b67c043534997e361dd3af1e8b676"
+      },
+      {
+        "ref": "nghttp2/1.56.0@adguard/oss#227b6065ed31c973828dff969ed60eac",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "ac6b19792f891ddf4c0c8b480adfb435"
+      },
+      {
+        "ref": "nghttp3/1.0.0@adguard/oss#eebebee4f2e7e2f96ff6604c29ec9232",
+        "packageID": "941ed9bdcf88658ff2bb22c2472771326d57a26f",
+        "packageRevision": "a3f99021b4c098d874814fc834673f3e"
+      },
+      {
+        "ref": "ngtcp2/1.0.1@adguard/oss#8df07ca7aeeba2cb52adad658ae8b357",
+        "packageID": "70c7cb57cbd9d2b2262635a76c9aeae6845fc917",
+        "packageRevision": "65173de88a990197f2bb3acc5f136a54"
+      },
+      {
+        "ref": "pcre2/10.37@adguard/oss#73864ed3c4d8e34486bc484dc3e133e4",
+        "packageID": "de446b090abf2ef554ffd35429b8461d81fedee7",
+        "packageRevision": "062af8e96c01177ff93c6b39dfe70016"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "2b36fb2501a9b595e35f587bb4cbca03f8b6d249",
+        "packageRevision": "9c479afe4c30dd639b9520579b8e6357"
+      },
+      {
+        "ref": "tldregistry/2022-12-26@adguard/oss#45b0964264aaf68f25514d9fa3f9558a",
+        "packageID": "941ed9bdcf88658ff2bb22c2472771326d57a26f",
+        "packageRevision": "a24a3a8d19e0f67d5c0ee082991265da"
+      },
+      {
+        "ref": "ada/2.7.4#e86909dd9cb9714ca39dbc12f7f41053",
+        "packageID": "a96cd17f31fdefa70be0ab117dcbdfda5c2210f4",
+        "packageRevision": "2ae4d8c6ad7d88181ebf419f252633d8"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "2b36fb2501a9b595e35f587bb4cbca03f8b6d249",
+        "packageRevision": "9c479afe4c30dd639b9520579b8e6357"
+      }
+    ],
+    "sim-x86": [
+      {
+        "ref": "cxxopts/3.1.1#b358aff6883980b4f0915734a5c8214a",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f4dfdc9b149c1875d795ceac4820564f"
+      },
+      {
+        "ref": "libevent/2.1.11@adguard/oss#871e556dc7db8847aefaa9cfd230db69",
+        "packageID": "b6e040ca670eefbdb606821d88399d8457d0e86f",
+        "packageRevision": "31ef8d53069190bcfbc97e46aba6ca89"
+      },
+      {
+        "ref": "openssl/boring-2024-09-13@adguard/oss#325eeda72477e4c1d1a18d607c8704c0",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "95f3237dd662273361451df63a76bd7d"
+      },
+      {
+        "ref": "libsodium/1.0.18@adguard/oss#812e2406acd49c4ba9a89a454b57315b",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "ead85b73c7a3edfb7b256d14b7b2142a"
+      },
+      {
+        "ref": "libuv/1.41.0@adguard/oss#1c1c2b1dfe58480a54ddf7a71a3ac806",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "eb9c9dfb3da31c90b1a907cc2cafffb9"
+      },
+      {
+        "ref": "klib/2021-04-06@adguard/oss#d79c40384bfe661c91c75ad1615bff0d",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "0a0b910a3e4ebdff3f4e77a676a73ede"
+      },
+      {
+        "ref": "ldns/2021-03-29@adguard/oss#fd1352e56cca9b0313c7f006f663e053",
+        "packageID": "24594d8a276dbe4fc49d10cf9e9e8828b28f709e",
+        "packageRevision": "8c55c1e55d51a0bac49d17b72c49c901"
+      },
+      {
+        "ref": "magic_enum/0.9.5#768c09bb424bda31d224304693b50fb3",
+        "packageID": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+        "packageRevision": "f9173d81294187c1cebdfcb1fcd8051c"
+      },
+      {
+        "ref": "native_libs_common/8.0.27@adguard/oss#3ab86bebf81a949892f6459bc3bea874",
+        "packageID": "a2b23728d8ecc9c55af981936a09585727e50a10",
+        "packageRevision": "da3c9b1e6141f5f89d00bfa4d55445d4"
+      },
+      {
+        "ref": "fmt/12.1.0#6baf0fb8351783472b94ee6e36232391",
+        "packageID": "0b4cedeb087c67270a644e2aed8c7d47ce9f74e3",
+        "packageRevision": "3e3065a466cfb5d37502e276f75e9014"
+      },
+      {
+        "ref": "llhttp/9.1.3@adguard/oss#73e3f4ea6b8b4ac39b0fa6e5b366a6f3",
+        "packageID": "5761e0064f55749adc294ca5d70c7b33ed734294",
+        "packageRevision": "55e073848e44579b7f8c6057310b00a7"
+      },
+      {
+        "ref": "nghttp2/1.56.0@adguard/oss#227b6065ed31c973828dff969ed60eac",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "50663854d79644e397786008ddae9a4e"
+      },
+      {
+        "ref": "nghttp3/1.0.0@adguard/oss#eebebee4f2e7e2f96ff6604c29ec9232",
+        "packageID": "27b4e40f1d23179ad3d2641dd27f0c6537a91481",
+        "packageRevision": "0db9dbf23a5ffb96cb2d04357538a8fe"
+      },
+      {
+        "ref": "ngtcp2/1.0.1@adguard/oss#8df07ca7aeeba2cb52adad658ae8b357",
+        "packageID": "b6e040ca670eefbdb606821d88399d8457d0e86f",
+        "packageRevision": "820058da110b630a6aa3bbe1f6688009"
+      },
+      {
+        "ref": "pcre2/10.37@adguard/oss#73864ed3c4d8e34486bc484dc3e133e4",
+        "packageID": "5ed67370de1ca4fcd559fa8584d274036dd02164",
+        "packageRevision": "2fb6e5a2bb269c3ea91b92ca45e1f431"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "f125e72ac5e051fda5f6c283c4f146388ec5a285",
+        "packageRevision": "dcb959aef97ef5b61a2e7830b85e711f"
+      },
+      {
+        "ref": "tldregistry/2022-12-26@adguard/oss#45b0964264aaf68f25514d9fa3f9558a",
+        "packageID": "27b4e40f1d23179ad3d2641dd27f0c6537a91481",
+        "packageRevision": "02ff31fb72c1cc5224bc05a2b3cd03c8"
+      },
+      {
+        "ref": "ada/2.7.4#e86909dd9cb9714ca39dbc12f7f41053",
+        "packageID": "a41604c32ebae49f0e7688e683ae08e720b31f96",
+        "packageRevision": "70a21ab54c118e6b52ceabf7af5ff5e7"
+      },
+      {
+        "ref": "gtest/1.14.0#f8f0757a574a8dd747d16af62d6eb1b7",
+        "packageID": "f125e72ac5e051fda5f6c283c4f146388ec5a285",
+        "packageRevision": "dcb959aef97ef5b61a2e7830b85e711f"
+      }
+    ]
+  }
+}

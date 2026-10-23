@@ -1,0 +1,26 @@
+{
+  "patchID": "2.8.45-umbra-transport1",
+  "files": {
+    "Info.plist": "a16b4e004654c9fcb77bad5705f3a9f096f942b3a7156f4bcad6c4a96ef80302",
+    "ios-arm64/AGDnsProxy.framework/AGDnsProxy": "0097f068823bdbacf183da0f9f8417a6d76a8ac659f482ac495e589826ad3d0a",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsAppProxyFlowManager.h": "312053872f83662bd47d448c41026eee3bbec2ad661dabf28dbef887e7b79226",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsProxy.h": "d87181d9771483af549269699b026c2896ea9f95ca21aea7eba2139858883f0c",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsProxyEvents.h": "11ec7a26e05650ded03569472bd964cf991edacf4b98c5de74b24c663d0ca7a3",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsProxyModule.h": "76355eb8b7f58c5d5070acad37679399682ccf076b05ec6434e599f844bc74eb",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsProxyXPC.h": "5125abf3f06eb89bf22eca7f8050c87ce404a3db81842fca12bcdb8620c249f4",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsTunListener.h": "256c24cc56c615fd66083216b69f570847c8d5664cc8a9dd99c60fb1156be819",
+    "ios-arm64/AGDnsProxy.framework/Headers/AGDnsXPCObject.h": "04c432be84d1e53449d85960233d90dab0fd22767f92f054d98b864ec472af16",
+    "ios-arm64/AGDnsProxy.framework/Info.plist": "ff3c42a3081f05095429c2e363771ecf1337cdcbf70d17f89d592556da7a0d89",
+    "ios-arm64/AGDnsProxy.framework/Modules/module.modulemap": "dbfe14e8ec06a4033875e7b87cbfcaf2979bd322bac1fa9ef436c67a9b0d4d46",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/AGDnsProxy": "8cf0d7eff0403bccb44604429ae7988c815fb3cc42e06b9218b9c7740c0576b8",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsAppProxyFlowManager.h": "312053872f83662bd47d448c41026eee3bbec2ad661dabf28dbef887e7b79226",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsProxy.h": "d87181d9771483af549269699b026c2896ea9f95ca21aea7eba2139858883f0c",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsProxyEvents.h": "11ec7a26e05650ded03569472bd964cf991edacf4b98c5de74b24c663d0ca7a3",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsProxyModule.h": "76355eb8b7f58c5d5070acad37679399682ccf076b05ec6434e599f844bc74eb",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsProxyXPC.h": "5125abf3f06eb89bf22eca7f8050c87ce404a3db81842fca12bcdb8620c249f4",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsTunListener.h": "256c24cc56c615fd66083216b69f570847c8d5664cc8a9dd99c60fb1156be819",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Headers/AGDnsXPCObject.h": "04c432be84d1e53449d85960233d90dab0fd22767f92f054d98b864ec472af16",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Info.plist": "4d207ea62bc6c7a0db6d8eced7d60f940fa28b348fe2e3828efd07b2dd13612a",
+    "ios-arm64_x86_64-simulator/AGDnsProxy.framework/Modules/module.modulemap": "dbfe14e8ec06a4033875e7b87cbfcaf2979bd322bac1fa9ef436c67a9b0d4d46"
+  }
+}

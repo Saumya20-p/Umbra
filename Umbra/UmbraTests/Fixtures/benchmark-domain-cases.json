@@ -1,0 +1,2398 @@
+{
+  "source": "Owner-supplied superadblocktest.com PDF, October 21 2026; distinct extracted domains, excluding test website",
+  "pdfSHA256": "22f9d0196b5ac1d10a9b1d510d7a3a3d17990fbbef3ac085c51841d6e8c51cb3",
+  "candidateRevision": "a1922493099f56bc5b0cf1f7bfa060921be421ee",
+  "note": "Static rule expectations, not website scores or actual denied-request totals. Candidate rules match names and subdomains; baseline hosts rules match exactly.",
+  "cases": [
+    {
+      "domain": "2975c.v.fwmrm.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "a.klaviyo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "a.lenovo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "a.teads.tv",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "aan.amazon.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "aax.amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "acdn.adnxs.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ad.crwdcntrl.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ad.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "ad.gt",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ad.lgappstv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "ad.linksynergy.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ad.mail.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adc3-launch.adcolony.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adclick.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adfox.yandex.ru",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adfstat.yandex.ru",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adjust.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "adlog.vivo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adm.hotjar.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adnxs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adroll.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads-api.tiktok.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads-api.twitter.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads-api.vivo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads-api.x.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads-sg.tiktok.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.huawei.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.linkedin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.pubmatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.roku.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.snapchat.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.stickyadstv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.tiktok.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.tremorhub.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.vizio.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.vk.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.x.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads.youtube.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ads30.adcolony.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adserver.unityads.unity3d.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adservetx.media.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adservice.google.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "adsfs.oppomobile.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adsrvr.org",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adtago.s3.amazonaws.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adtech.yahooinc.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "advertising-api-eu.amazon.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "advertising.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "advertising.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "advertising.yandex.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "advice-ads.s3.amazonaws.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "adx.ads.oppomobile.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "afs.googlesyndication.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "amoeba.web.roku.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "an.facebook.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics-api.samsunghealthcn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics-sg.tiktok.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.adobe.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.google.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "analytics.pointdrive.linkedin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.query.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.tiktok.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.twitter.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "analytics.x.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analytics.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "analyticsengine.s3.amazonaws.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "apex.go.sonobi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api-adservices.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api-js.mixpanel.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.ad.xiaomi.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.amplitude.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.bugsnag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.fyber.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.luckyorange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.mixpanel.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.onesignal.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "api.optimizely.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.partnerstack.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.rlcdn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.segment.io",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "api.taboola.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.viglink.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api.vungle.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api2.amplitude.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "api2.branch.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "app.adjust.com",
+      "baselineBlocked": true,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "app.appsflyer.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "app.bugsnag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "app.getsentry.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "app.posthog.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "app.usercentrics.eu",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "applovin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "appmetrica.yandex.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "appsflyer.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "as.casalemedia.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "auction.unityads.unity3d.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "b.scorecardresearch.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bam-cell.nr-data.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bam.nr-data.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bat.bing.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bcp.crwdcntrl.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bdapi-ads.realmemobile.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bdapi-in-ads.realmemobile.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bea4.v.fwmrm.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bidder.criteo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bidswitch.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bingads.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "bluekai.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "bnc.lt",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "books-analytics-events.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "browser-intake-datadoghq.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "browser.events.data.msn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "browser.sentry-cdn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "business-api.tiktok.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "c.amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "c.bing.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "c.clarity.ms",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "c.gumgum.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "capi.connatix.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "careers.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "casalemedia.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cd.connatix.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn-test.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.cookielaw.org",
+      "baselineBlocked": true,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn.doubleverify.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.dynamicyield.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn.heapanalytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.indexexchange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.kargo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.lr-ingest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.luckyorange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.mgid.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.onesignal.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn.optimizely.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn.permutive.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.privacy-mgmt.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cdn.rudderlabs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.segment.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.siftscience.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.taboola.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.teads.tv",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cdn.viglink.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ck.ads.oppomobile.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "clarity.ms",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "claritybt.freshmarketer.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "click.googleanalytics.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "click.linksynergy.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "click.mailchimp.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "click.oneplus.cn",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "clickadu.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "clientstream.launchdarkly.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cloudflareinsights.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cm.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cmp.inmobi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cmp.osano.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cmp.usercentrics.eu",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "coinimp.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "config.samsungads.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "config.unityads.unity3d.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "connect.facebook.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "consent.cookiebot.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "consent.trustarc.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "consentcdn.cookiebot.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "contextual.media.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "contextweb.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "control.kochava.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "cookiebot.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "criteo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "crwdcntrl.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "cs.luckyorange.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ct.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "customer.io",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "d.adroll.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "d.applovin.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "d.impactradius-event.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "d.reddit.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "dai.google.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "data.ads.oppomobile.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "data.mistat.india.xiaomi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "data.mistat.rus.xiaomi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "data.mistat.xiaomi.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "dc.ads.linkedin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "decide.mixpanel.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "device-metrics-us-2.amazon.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "device-metrics-us.amazon.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "dis.criteo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "doubleverify.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "eb2.3lift.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "edge.fullstory.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "eu.posthog.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "events.hotjar.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "events.launchdarkly.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "events.reddit.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "events.redditmedia.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "events.segment.io",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "events3alt.adcolony.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "exoclick.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "extmaps-api.yandex.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fastlane.rubiconproject.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fingerprintjs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "firebase-settings.crashlytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fls-na.amazon.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fpjs.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fundingchoicesmessages.google.com",
+      "baselineBlocked": true,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "fw.adsafeprotected.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "fwtracks.freshmarketer.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "g.jwpsrv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "gemini.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "geo.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "geolocation.onetrust.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "globalapi.ad.xiaomi.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "go.redirectingat.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "go.skimresources.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "google-analytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "googleads.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "googleads4.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "googleadservices.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "googletagmanager.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "googletagservices.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "graph.facebook.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "graph.instagram.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "grs.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "gtm.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "gum.criteo.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "hbopenbid.pubmatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "htlb.casalemedia.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "htlbid.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "i.instagram.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "iadsdk.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ib.adnxs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "id5-sync.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "identify.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "idsync.rlcdn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "image6.pubmatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "images.taboola.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "in.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "indexexchange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "info.lgsmartad.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ingest.sentry.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "init.supersonicads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "inmobi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "insightexpressai.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "insights.adsrvr.org",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "insights.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "iot-eu-logser.realme.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "iot-logser.realme.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ir-na.amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ironsource.mobi",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "js-agent.newrelic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "js.driftt.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "juicyads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "kochava.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "liftoff.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "list-manage.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "live.chartboost.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "log.byteoversea.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "log.fc.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "log.outbrain.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "log.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "logbak.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "logs.roku.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "logservice.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "logservice1.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "logx.optimizely.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "m.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mads-eu.amazon.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mail.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "match.adsrvr.org",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mc.yandex.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mcs-va.tiktokv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "media.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mediavisor.doubleclick.net",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.adobe.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.brightcove.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.data.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.icloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics.mzstatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrics2.data.hicloud.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "metrika.yandex.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mgid.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mineralt.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "minero.cc",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mon.byteoversea.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mon.tiktokv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "monerominer.rocks",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ms.applovin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "mssl.fwmrm.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "munchkin.marketo.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ngfts.lge.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "nmetrics.samsung.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "notes-analytics-events.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "notify.bugsnag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "nr.taboola.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "o0.ingest.sentry.io",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "o2.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "oas.openx.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "odb.outbrain.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "offerwall.yandex.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "omtrdc.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "onclickads.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "onetag-sys.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "open.oneplus.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "openx.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "optimized-by.rubiconproject.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "outcome-ssp.supersonicads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pagead.l.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "pagead2.googleadservices.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pagead2.googlesyndication.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pangleglobal.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "partnerads.ysm.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "partnerstack.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pippio.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.adsafeprotected.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.facebook.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.mathtag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.quantserve.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.quora.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.redditmedia.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pixel.rubiconproject.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "popads.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "popcash.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "popmyads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "prd.jwpltx.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "prebid.adnxs.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "prf.hn",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "privacyportal.onetrust.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "prod.uidapi.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "propellerads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "propellerclick.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pubads.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "pubmatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "px.ads.linkedin.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "px.srvcs.tumblr.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "qevents.quora.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "quantcast.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "quantserve.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "r.lr-ingest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "rcm-na.amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "realtime.luckyorange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "redirect.viglink.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "redirector.googlevideo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "redirector.skimresources.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "refersion.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "region1.google-analytics.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "rs.fullstory.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "rt.applovin.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "rtb.openx.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "rubiconproject.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "rudderstack.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "rum.browser-intake-datadoghq.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "s.adroll.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "s.clarity.ms",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "s.innovid.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "s.skimresources.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "s.youtube.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "samsung-com.112.2o7.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "samsungads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sb.scorecardresearch.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sc-analytics.appspot.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sc-static.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "script.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sdk-api-v1.singular.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sdk.iad-01.braze.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sdk.privacy-center.org",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "sdkconfig.ad.intl.xiaomi.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sdkconfig.ad.xiaomi.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "search.spotxchange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "secure.adnxs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "securepubads.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "servicer.mgid.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sessions.bugsnag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "settings-win.data.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "settings.luckyorange.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "shareasale.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "sharethrough.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "siftscience.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "simage2.pubmatic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sin3-ib.adnxs.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "smartclip.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "smartclip.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "smartyads.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "smetrics.samsung.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "snap.licdn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "snowplowanalytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sourcepoint.mgr.consensu.org",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "spotxchange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ssl.google-analytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "ssl.p.jwpcdn.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "sslwidget.criteo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "st.dynamicyield.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "stackadapt.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "statdynamic.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.ads-twitter.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.adsafeprotected.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.cloudflareinsights.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.criteo.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "static.klaviyo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "static.media.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "stats.g.doubleclick.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "stats.wp.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "stickyadstv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "surveys.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sync-tm.everesttech.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "sync.crwdcntrl.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sync.kargo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "sync.mathtag.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "t.pepperjamnetwork.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "t.skimresources.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tagmanager.google.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "tags.bluekai.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "tags.crwdcntrl.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "telemetry.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tlx.3lift.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tools.mouseflow.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "top-fwz1.mail.ru",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tpc.googlesyndication.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tps.doubleverify.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tr.facebook.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tr.iadsdk.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tr.snapchat.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "track.customer.io",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "track.hubspot.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "track.linksynergy.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tracker.snowplowanalytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tracking.miui.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tracking.rus.miui.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "trafficjunky.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "trc.taboola.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tremorhub.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "trk.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "tvinteractive.tv",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "tvpixel.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "u.openx.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "udc.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "udcm.yahoo.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "unityads.unity3d.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "upload.luckyorange.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "us-ads.openx.net",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "us.i.posthog.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "us.ibs.lgappstv.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "us.info.lgsmartad.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "vars.hotjar.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "vid.connatix.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "vk.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "vortex-win.data.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "vortex.data.microsoft.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "vungle.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "w1.luckyorange.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "watson.telemetry.microsoft.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "wd.adcolony.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "webminepool.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "webview.unityads.unity3d.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "widget.intercom.io",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "widgets.outbrain.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "widgets.pinterest.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "ws-na.amazon-adsystem.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "www.anrdoezrs.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "www.awin1.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "www.coinimp.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "www.dpbolvw.net",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "www.google-analytics.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "www.googletagmanager.com",
+      "baselineBlocked": true,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "www.tkqlhce.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "wzrkt.com",
+      "baselineBlocked": true,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "xp.apple.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    },
+    {
+      "domain": "yumenetworks.com",
+      "baselineBlocked": false,
+      "candidateBlocked": true
+    },
+    {
+      "domain": "zenaps.com",
+      "baselineBlocked": false,
+      "candidateBlocked": false
+    }
+  ]
+}
